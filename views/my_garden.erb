@@ -1,0 +1,13 @@
+<h1>My Garden</h1>
+<h2>Hello! <%= @user['name'] %></h2>
+
+<div class="allgarden">
+    <% flowers.each do |garden| %>
+        <div>
+            <a href="/garden/<%= garden['id'] %>"><img class="garden-img" src="<%= garden['image_url'] %>" alt=""></a>
+       
+            <h3><%= garden['name'] %></h3>
+        </div>
+
+    <% end %>
+</div>

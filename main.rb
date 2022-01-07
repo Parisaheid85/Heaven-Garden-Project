@@ -7,7 +7,8 @@ require 'pry'
 
 require_relative 'models/garden.rb'
 require_relative 'models/user.rb'
-
+require_relative 'controllers/user_controller'
+require_relative 'controllers/garden_controller'
 
 enable :sessions
 
@@ -36,3 +37,7 @@ get '/about' do
   
   erb(:about)
 end
+
+
+
+  

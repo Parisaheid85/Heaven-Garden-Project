@@ -34,9 +34,12 @@ def logged_in?()
   
 
 
+  
 
   def current_user(id)
-    sql = "select * from users where id = $1;"
+    
+    sql = "select * from users where id = #{ session[:user_id] };"
     user = db_query(sql).first
+   
     return OpenStruct.new(user)
   end

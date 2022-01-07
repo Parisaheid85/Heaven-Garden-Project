@@ -12,9 +12,9 @@ def db_query(sql, params = [])
 
 
 
-def create_garden(name, image_url, sunlight, fertilizer, moisture, comments, user_id, flowers)
+def create_garden(name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id)
     sql = "insert into mygarden (name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id) values ($1, $2, $3, $4, $5, $6, $7, $8);"
-    db_query(sql, [name, image_url, sunlight, fertilizer, moisture, comments, user_id, flowers])
+    db_query(sql, [name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id])
   
 end
 
@@ -37,7 +37,7 @@ def update_garden(name, image_url, sunlight, fertilizer, moisture, comments, id,
       "update mygarden set 
       name = $1, image_url = $2, 
       sunlight = $3, fertilizer = $4,
-      moisture = $5, comments = $6, flowers = $7, where id = $8;"
+      moisture = $5, comments = $6, flowers = $7, id = $8 where id = $8;"
     
     db_query(sql, [name, image_url, sunlight, fertilizer, moisture, comments, id, flowers])
 end
