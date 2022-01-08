@@ -1,7 +1,7 @@
-def find_user_by_id(id)
-    db_query('select * from users where id = $1;', [id])[0]
-  end
 
+# def find_user_by_id(id)
+#   db_query('select * from users where id = $1;', [id])[0]
+# end
 
 def create_users(name, dob, origin, email, password)
     
@@ -27,19 +27,28 @@ def logged_in?()
   
   
 
+  # def login_user(email)
+  #   sql = "select * from users where email #{ session[:email] };"
+  #   db_query(sql, [email])
+  # end
+  
+
+
+  
+
+  # def current_user()
+    
+  #   sql = "select * from users where id = #{ session[:user_id] };"
+  #   user = db_query(sql).first
+   
+  #   return OpenStruct.new(user)
+  # end
   def login_user(email)
     sql = "select * from users where email = $1;"
     db_query(sql, [email])
   end
   
-
-
-  
-
   def current_user(id)
-    
-    sql = "select * from users where id = #{ session[:user_id] };"
-    user = db_query(sql).first
-   
-    return OpenStruct.new(user)
+    sql = "select * from users where id = $1;"
+    db_query(sql, [id])
   end

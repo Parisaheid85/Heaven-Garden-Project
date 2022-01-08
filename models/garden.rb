@@ -12,9 +12,9 @@ def db_query(sql, params = [])
 
 
 
-def create_garden(name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id)
-    sql = "insert into mygarden (name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id) values ($1, $2, $3, $4, $5, $6, $7, $8);"
-    db_query(sql, [name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id])
+def create_garden( image_url, sunlight, fertilizer, moisture, comments, flowers, user_id)
+    sql = "insert into mygarden ( image_url, sunlight, fertilizer, moisture, comments, flowers, user_id) values ($1, $2, $3, $4, $5, $6, $7);"
+    db_query(sql, [image_url, sunlight, fertilizer, moisture, comments, flowers, user_id])
   
 end
 
@@ -27,20 +27,24 @@ end
 
 
 def all_flowers_garden(user_id)
-    sql = "select * from mygarden where user_id = $1;"
-    db_query(sql, [user_id])
+  sql = "select * from mygarden where user_id = $1;"
+  
+  db_query(sql, [user_id])
+ 
 end
 
 # edit/update
-def update_garden(name, image_url, sunlight, fertilizer, moisture, comments, id, flowers)
+def update_garden(image_url, sunlight, fertilizer, moisture, comments, id )
     sql = 
       "update mygarden set 
-      name = $1, image_url = $2, 
-      sunlight = $3, fertilizer = $4,
-      moisture = $5, comments = $6, flowers = $7, id = $8 where id = $8;"
+       image_url = $1, 
+      sunlight = $2, fertilizer = $3,
+      moisture = $4, comments = $5, id = $6 where id = $6;"
     
-    db_query(sql, [name, image_url, sunlight, fertilizer, moisture, comments, id, flowers])
+    db_query(sql, [image_url, sunlight, fertilizer, moisture, comments, id])
 end
+
+
 
 def delete_garden(id)
     db_query("delete from mygarden where id = $1;", [id])

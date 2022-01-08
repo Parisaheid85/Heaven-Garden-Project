@@ -1,0 +1,36 @@
+<h1>Edit Plant Details</h1>
+<h2><%= @garden['flowers'] %> Flower</h2>
+
+<section class="profile">
+  <div>
+    <form action="/garden/<%= @garden['id'] %>" method="post">
+      <input type="hidden" name="_method" value="put">
+
+     
+      <div>
+        <label for="">Image Url</label><br>
+        <textarea name="image_url" id="image_url" cols="60" rows="10" placeholder="Http..."><%= @garden['image_url'] %></textarea>
+      </div>
+      <div>
+        <label for="">Sunlight Requirements</label><br>
+        <textarea name="sunlight" id="sunlight" cols="60" rows="10" ><%= @garden['sunlight'] %></textarea>
+      </div>
+      <div>
+        <label for="">Fertilizer Requirements</label><br>
+        <textarea name="fertilizer" id="fertilizer" cols="60" rows="10" ><%= @garden['fertilizer'] %></textarea>
+      </div>
+
+      <div>
+        <label for="">Moisture</label><br>
+        <textarea name="moisture" id="moisture" cols="60" rows="10" ><%= @garden['moisture'] %></textarea>
+      </div>
+      <div>
+        <label for="">Comments</label><br>
+        <textarea name="comments" id="comments" cols="60" rows="10" ><%= @garden['comments'] %></textarea>
+      </div>
+      <div class="button">
+        <button>Edit</button>
+      </div>
+    </form>
+  </div>
+</section>

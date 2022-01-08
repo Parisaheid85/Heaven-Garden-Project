@@ -2,11 +2,11 @@
 
     <h1><%= "flower name" %></h1>
     <div class="remove">
-        <a class="link-edit" href="/garden/<%= garden['id'] %>/edit">Edit garden</a>
+        <a class="edit" href="/garden/<%= garden['id'] %>/edit">Edit Garden</a>
 
         <form class="form" action="/garden/<%= garden['id']%>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <button class="link-btn">Delete garden</button>
+            <button class="del-btn">Delete Flower</button>
         </form>
     </div>
 
@@ -16,9 +16,9 @@
             <div class="image">
                 <img class="garden-img" src="<%= garden['image_url'] %>" alt="">
             </div>
-            <h3><span class="title">sunlight: </span><%= garden['sunlight'] %></h3>
-            <h3><span class="title">fertilizer: </span><%= garden['fertilizer'] %></h3>
-            <h3><span class="title">moisture: </span><%= garden['moisture'] %></h3>
+            <h3><span class="title">Sunlight: </span><%= garden['sunlight'] %></h3>
+            <h3><span class="title">Fertilizer: </span><%= garden['fertilizer'] %></h3>
+            <h3><span class="title">Moisture: </span><%= garden['moisture'] %></h3>
             <h3><span class="title">Comments: </span><%= garden['comments'] %></h3>
         </div>
     </div>

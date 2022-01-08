@@ -3,8 +3,9 @@ require 'pry'
 
 post '/mygarden' do
   
-    create_garden(params[:name], params[:image_url], params[:Sunlight], params[:fertilizer], params[:moisture], params[:comments],session[:user_id], params[:flowers] )
-    (name, image_url, sunlight, fertilizer, moisture, comments, flowers, user_id)
+
+    create_garden( params[:image_url], params[:sunlight], params[:fertilizer], params[:moisture], params[:comments],params[:flowers], session[:user_id])
+    
   
     redirect '/mygarden'
   end
@@ -21,9 +22,9 @@ post '/mygarden' do
   # edit garden
   put '/garden/:id' do
       
-    update_garden(params[:name], params[:image_url], params[:Sunlight], params[:fertilizer], params[:moisture], params[:id])
+    update_garden(params['image_url'], params['sunlight'], params['fertilizer'], params['moisture'], params['comments'], params['id'])
     
-    redirect '/mygarden'
+    redirect '/mygarden' 
   end
 
   # new garden
@@ -37,43 +38,33 @@ get '/mygarden' do
   redirect 'login' unless logged_in?
   
   results = all_flowers_garden(session[:user_id])
-  puts results
+ 
   
   
   
   result = current_user(session[:user_id])
-  @user = result
+  @user = result[0]
 
-  erb(:my_garden, locals: {flowers: results})
-  
+ 
+  erb(:my_garden, locals: {gardens: results})
 end
 
 
 get '/garden/:id' do
     
-  result = find_garden_by_id(params[:id])
+  result = find_garden_by_id(params['id'])
   @garden = result
 
-  erb(:garden)
-   
 
+ erb(:garden)
 end
 
 
-
- # add flower to garden
- get '/garden/new' do
-  redirect 'login' unless logged_in?
-
-  erb(:new_garden)
-end
 
 
 delete '/garden/:id' do
-  
-  sql = "delete from mygarden where id = #{ params[:id] };"
- 
-  db_query(sql) 
+
+  delete_garden(params['id'])
 
   redirect '/mygarden'
 end
@@ -84,5 +75,5 @@ end
 get '/session' do
   session[:user_id] = nil
 
-  redirect '/'
+  redirect '/login'
 end

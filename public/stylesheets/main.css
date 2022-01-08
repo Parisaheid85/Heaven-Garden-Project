@@ -1,0 +1,189 @@
+body {
+  background-color: rgb(63, 202, 153);
+  background-image: url("https%3A%2F%2Fth-thumbnailer.cdn-si-edu.com%2FMqtKOSfuUFBK9ICop7xufk5gvjE%3D%2Ffit-in%2F1072x0%2Fhttps%3A%2F%2Ftf-cmsv2-smithsonianmag-media.s3.amazonaws.com%2Ffiler%2F8f%2F48%2F8f486584-58dc-4c78-a651-855426addaa6%2F42-57758981.jpg&imgrefurl=https%3A%2F%2Fwww.smithsonianmag.com%2Ftravel%2Fstep-inside-worlds-most-dangerous-garden-if-you-dare-180952635%2F&tbnid=-blVC_Rw9g2vzM&vet=10CCMQMyj9BGoXChMIsNftpMOh9QIVAAAAAB0AAAAAEAo..i&docid=rWZZN8YU_VTOEM&w=1072&h=715&q=garden%20images&ved=0CCMQMyj9BGoXChMIsNftpMOh9QIVAAAAAB0AAAAAEAo");
+  background-size: contain;
+  height: auto;
+  padding: 2em;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: green;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(107, 105, 105);
+}
+
+h3 {
+  font-size: 15px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 100px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header {
+  position: fixed;
+  margin: auto;
+  background-color: rgba(139, 47, 19, 0.968);
+  height: 40px;
+  width: 100%;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  padding: 10px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* .header a:hover {
+  color: yellow;
+} */
+
+.garden {
+  display: block;
+  justify-content: baseline;
+}
+
+.flowers-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.garden-tag {
+  color: black;
+  text-decoration: none;
+}
+
+.garden-tag:hover {
+  color: red;
+}
+
+.btn-garden {
+  border: none;
+  background: black;
+  color: white;
+  font-family: monospace;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about {
+  background-image: url("img_tree.gif"), url("paper.gif");
+  background-color: #cccccc;
+
+  border: 5px solid #16161e;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin-top: 70px;
+}
+
+footer {
+  background-color: #16161e;
+  position: fixed;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 20px;
+  padding: 10px;
+  left: 0px;
+  bottom: 0px;
+  margin-top: 10px;
+}
+
+.garden-img {
+  width: 150px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.allgarden {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.title {
+  color: black;
+}
+
+.garden {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.garden-img {
+  border: 5px solid #16161e;
+  box-shadow: 5px 10px 10px 0 rgb(107, 105, 105);
+}
+
+.remove {
+  padding-top: 10px;
+  float: left;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.edit {
+  margin-left: 8px;
+}
+
+.del-btn {
+  /* border: none; */
+  background: rgba(255, 0, 0, 0);
+  font-family: monospace;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+.link-btn:hover {
+  color: black;
+}
+
+a {
+  font-size: 15px;
+  color: green;
+}
+
+a:hover {
+  color: black;
+}
+
+.image {
+  justify-content: center;
+}

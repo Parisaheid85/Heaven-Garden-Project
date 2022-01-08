@@ -13,7 +13,7 @@ CREATE TABLE users (
 
 CREATE TABLE mygarden (
     id SERIAL PRIMARY KEY,
-    image_url VARCHAR(600),
+    image_url TEXT,
     sunlight text,
     fertilizer text,
     moisture text,
@@ -28,7 +28,10 @@ CREATE TABLE flowers (
 );
 
 ALTER TABLE mygarden ADD COLUMN flowers VARCHAR(400);
-ALTER TABLE mygarden ADD COLUMN flowers TEXT[];
+ALTER TABLE mygarden ADD COLUMN flowers TEXT;
+ALTER TABLE mygarden ADD COLUMM mygarden VARCHAR(2000);
+
+
 
 INSERT INTO flowers (name) VALUES ('Tulip');
 INSERT INTO flowers (name) VALUES ('Rose');
