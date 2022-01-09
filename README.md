@@ -6,13 +6,13 @@ This app will allow the user to upload images of the plant/flowers once created 
 
 WEB APP TECH:
 
-Ruby and Sinatra framework
-PostgreSQL database
-HTNL & CSS
-bcrypt password hashing
-Heroku to deploy
+- Ruby and Sinatra framework,
+- PostgreSQL database,
+- HTNL & CSS,
+- bcrypt password hashing,
+- Heroku to deploy.
 
-LOGIN DETAILS
+LOGIN DETAILS:
 
 Either sign up with a new account or simply use below login details if you wish to check out the app.
 
