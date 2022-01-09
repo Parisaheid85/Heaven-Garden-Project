@@ -1,12 +1,12 @@
  <% @garden.each do |garden| %> 
 
-    <h1><%= "flower name" %></h1>
+    <h1><%= "Flower Care Tips" %></h1>
     <div class="remove">
-        <a class="edit" href="/garden/<%= garden['id'] %>/edit">Edit Garden</a>
+        <a class="edit" href="/garden/<%= garden['id'] %>/edit">Edit</a>
 
         <form class="form" action="/garden/<%= garden['id']%>" method="post">
             <input type="hidden" name="_method" value="delete">
-            <button class="del-btn">Delete Flower</button>
+            <button class="del-btn">Delete</button>
         </form>
     </div>
 

@@ -1,17 +1,19 @@
 body {
-  background-color: rgb(63, 202, 153);
-  background-image: url("https%3A%2F%2Fth-thumbnailer.cdn-si-edu.com%2FMqtKOSfuUFBK9ICop7xufk5gvjE%3D%2Ffit-in%2F1072x0%2Fhttps%3A%2F%2Ftf-cmsv2-smithsonianmag-media.s3.amazonaws.com%2Ffiler%2F8f%2F48%2F8f486584-58dc-4c78-a651-855426addaa6%2F42-57758981.jpg&imgrefurl=https%3A%2F%2Fwww.smithsonianmag.com%2Ftravel%2Fstep-inside-worlds-most-dangerous-garden-if-you-dare-180952635%2F&tbnid=-blVC_Rw9g2vzM&vet=10CCMQMyj9BGoXChMIsNftpMOh9QIVAAAAAB0AAAAAEAo..i&docid=rWZZN8YU_VTOEM&w=1072&h=715&q=garden%20images&ved=0CCMQMyj9BGoXChMIsNftpMOh9QIVAAAAAB0AAAAAEAo");
-  background-size: contain;
-  height: auto;
-  padding: 2em;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCNQ5FvPdJ6du0KtoV3QA2JiQArE6MAL2g8IDnjveqqEfHj0VjJ_UdZhMqFjx7aKiavI&usqp=CAU");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
   background-repeat: no-repeat;
 }
 
 h1 {
   text-align: center;
+  font-family: Aclonica;
+  text-overflow: clip;
   margin-top: 50px;
   margin-bottom: 10px;
-  color: green;
+  color: rgb(107, 105, 105);
   font-size: 40px;
 }
 
@@ -19,11 +21,6 @@ h2 {
   text-align: center;
   color: rgb(107, 105, 105);
 }
-
-h3 {
-  font-size: 15px;
-}
-
 .box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -40,7 +37,7 @@ h3 {
 .header {
   position: fixed;
   margin: auto;
-  background-color: rgba(139, 47, 19, 0.968);
+  background-color: rgb(222, 202, 135);
   height: 40px;
   width: 100%;
   height: 40px;
@@ -51,14 +48,10 @@ h3 {
 
 .header a {
   text-decoration: none;
-  color: white;
-  text-transform: uppercase;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
   margin-top: 10px;
 }
-
-/* .header a:hover {
-  color: yellow;
-} */
 
 .garden {
   display: block;
@@ -103,10 +96,10 @@ h3 {
 }
 
 footer {
-  background-color: #16161e;
-  position: fixed;
+  background-color: burlywood;
   text-align: center;
-  color: white;
+  position: fixed;
+  color: rgba(128, 128, 128, 0.954);
   width: 100%;
   height: 20px;
   padding: 10px;
@@ -136,13 +129,13 @@ footer {
 }
 
 .garden {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
 }
 
 .garden-img {
-  border: 5px solid #16161e;
+  border: 3px solid green;
   box-shadow: 5px 10px 10px 0 rgb(107, 105, 105);
 }
 
@@ -158,32 +151,24 @@ footer {
 
 .edit {
   margin-left: 8px;
+  font-size: 20px;
 }
 
 .del-btn {
-  /* border: none; */
-  background: rgba(255, 0, 0, 0);
   font-family: monospace;
+  background: rgb(222, 202, 135);
+  border: none;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   text-align: center;
   margin-top: 7px;
   font-size: 15px;
 }
 
-.link-btn:hover {
+.del-btn:hover {
   color: black;
 }
 
 a {
   font-size: 15px;
-  color: green;
-}
-
-a:hover {
-  color: black;
-}
-
-.image {
-  justify-content: center;
 }

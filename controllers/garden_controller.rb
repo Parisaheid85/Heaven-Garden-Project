@@ -10,6 +10,26 @@ post '/mygarden' do
     redirect '/mygarden'
   end
 
+  
+
+   # new garden
+get '/garden/new' do
+  redirect 'login' unless logged_in?
+
+  erb(:new_garden)
+end
+
+
+
+  get '/garden/:id' do
+    
+    result = find_garden_by_id(params['id'])
+    @garden = result
+  
+  
+   erb(:garden)
+  end
+  
 
   get '/garden/:id/edit' do
   
@@ -27,12 +47,7 @@ post '/mygarden' do
     redirect '/mygarden' 
   end
 
-  # new garden
-get '/garden/new' do
-  redirect 'login' unless logged_in?
-
-  erb(:"new_garden")
-end
+ 
 
 get '/mygarden' do
   redirect 'login' unless logged_in?
@@ -50,14 +65,6 @@ get '/mygarden' do
 end
 
 
-get '/garden/:id' do
-    
-  result = find_garden_by_id(params['id'])
-  @garden = result
-
-
- erb(:garden)
-end
 
 
 
