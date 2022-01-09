@@ -8,7 +8,7 @@ WEB APP TECH:
 
 - Ruby and Sinatra framework,
 - PostgreSQL database,
-- HTNL & CSS,
+- HTML & CSS,
 - bcrypt password hashing,
 - Heroku to deploy.
 
