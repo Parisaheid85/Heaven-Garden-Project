@@ -27,9 +27,11 @@ CREATE TABLE flowers (
     name TEXT
 );
 
-ALTER TABLE mygarden ADD COLUMN flowers VARCHAR(400);
+
 ALTER TABLE mygarden ADD COLUMN flowers TEXT;
-ALTER TABLE mygarden ADD COLUMN mygarden VARCHAR(2000);
+
+ALTER TABLE mygarden ADD COLUMN flowers VARCHAR(400);
+
 
 
 
@@ -59,8 +61,6 @@ INSERT INTO flowers (name) VALUES ('Hyacinth');
 INSERT INTO flowers (name) VALUES ('Daffodil');
 INSERT INTO flowers (name) VALUES ('Marigold');
 INSERT INTO flowers (name) VALUES ('Bluebell');
-
-
 INSERT INTO flowers (name) VALUES ('Orchid');
 INSERT INTO flowers (name) VALUES ('Peruvian Lily');
 INSERT INTO flowers (name) VALUES ('Gladiolus');
