@@ -28,9 +28,7 @@ CREATE TABLE flowers (
 );
 
 
-ALTER TABLE mygarden ADD COLUMN flowers TEXT;
 
-ALTER TABLE mygarden ADD COLUMN flowers VARCHAR(400);
 
 
 
