@@ -4,7 +4,7 @@ require 'pry'
 # create garden table
 # raise db_query function
 def db_query(sql, params = [])
-    conn = PG.connect(dbname: 'heaven_garden')
+    conn = PG.connect(ENV['DATABASE_URL'] || {dbname: 'heaven_garden'})
     result = conn.exec_params(sql, params) 
     conn.close
     return result

@@ -1,9 +1,12 @@
-     
+ # heroku - hosting provider
+ 
+ # dependencies
+ 
 require 'sinatra' 
-require 'sinatra/reloader'
+require 'sinatra/reloader' if development?
 require 'pg' 
 require 'bcrypt'
-require 'pry'
+
 
 require_relative 'models/garden.rb'
 require_relative 'models/user.rb'
