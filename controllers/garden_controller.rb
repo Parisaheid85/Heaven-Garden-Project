@@ -1,4 +1,3 @@
-require 'pry'
 
 
 post '/mygarden' do
@@ -10,7 +9,7 @@ post '/mygarden' do
     redirect '/mygarden'
   end
 
-  
+
 
    # new garden
 get '/garden/new' do

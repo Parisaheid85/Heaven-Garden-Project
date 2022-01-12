@@ -1,5 +1,5 @@
 require 'pg'
-require 'pry'
+
 
 # create garden table
 # raise db_query function
