@@ -66,7 +66,7 @@ h2 {
 
 .flowers-list {
   list-style-type: none;
-  padding: 0;
+  padding: 2rem;
   margin: 0;
 }
 
@@ -143,8 +143,16 @@ footer {
 }
 
 .edit {
-  margin-left: 8px;
-  font-size: 20px;
+  font-family: monospace;
+  background: rgb(222, 202, 135);
+  padding: 0 15px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 7px;
+  font-size: 15px;
+  color: black;
 }
 
 .del-btn {
